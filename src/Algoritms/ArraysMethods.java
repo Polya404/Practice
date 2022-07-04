@@ -9,9 +9,8 @@ public class ArraysMethods {
     }
 
     public static int[] reverseArray(int[] array) {
-        //напишите тут ваш код
         int tmp;
-        for (int i = (array.length-1), j = 0; i > (array.length/2)-1; i--, j++) {  //9
+        for (int i = (array.length-1), j = 0; i > (array.length/2)-1; i--, j++) {
                 tmp = array[i];
                 array[i] = array[j];
                 array[j] = tmp;
