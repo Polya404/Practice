@@ -1,6 +1,7 @@
 package leetcode;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class ContainsDuplicate {
     public static void main(String[] args) {
@@ -13,22 +14,30 @@ public class ContainsDuplicate {
          * value appears at least twice in the array, and
          * return false if every element is distinct.
          */
-        HashMap<Integer, Integer> counter = new HashMap<>();
+//        HashMap<Integer, Integer> counter = new HashMap<>();
+//        for (int num : nums) {
+//            if (counter.containsKey(num)) {
+//                counter.put(num, 2);
+//            } else {
+//                counter.put(num, 1);
+//            }
+//        }
+//        for (int num : nums) {
+//
+//            if (counter.get(num).equals(2)) {
+//                return true;
+//            }
+//        }
+//        System.out.println(counter);
+//        return false;
+        HashSet<Integer> count = new HashSet<>();
         for (int num : nums) {
-            if (counter.containsKey(num)) {
-                counter.put(num, 2);
-            } else {
-                counter.put(num, 1);
-            }
-        }
-        for (int num : nums) {
-
-            if (counter.get(num).equals(2)) {
+            if (count.contains(num)) {
                 return true;
+            } else {
+                count.add(num);
             }
         }
-        System.out.println(counter);
         return false;
-
     }
 }
