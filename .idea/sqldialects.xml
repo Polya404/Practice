@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/EducationExamples/ftgo-monolith/ftgo-flyway/src/main/resources/db/migration/V1__create_ftgo_db.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/EducationExamples/ftgo-monolith/mysql/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_02/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_02/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_02/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_02/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_03/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_03/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_03/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_03/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_04/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_04/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_04/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_04/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_05/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_05/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_05/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_05/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_07/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_07/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_07/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_07/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_08/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_08/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_08/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_08/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_09/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_09/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_09/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH02/02_09/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH03/03_02/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH03/03_02/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH03/03_02/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH03/03_02/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH04/04_03/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH04/04_03/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH04/04_03/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH04/04_03/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH05/05_02/begin/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH05/05_02/begin/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH05/05_02/end/spring-security/admin-web/src/main/resources/data.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Spring/Ex_Files_Spring_Spring_Security/Exercise Files/CH05/05_02/end/spring-security/admin-web/src/main/resources/schema.sql" dialect="GenericSQL" />
+  </component>
+</project>

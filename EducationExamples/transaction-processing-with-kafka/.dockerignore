@@ -1,0 +1,23 @@
+# Build artifacts
+.gradle
+build
+!build/libs
+out
+*.jar
+
+# IntelliJ
+.idea
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and reports
+*.log
+test-output/
+reports/
+
+# Git
+.git
+.gitignore

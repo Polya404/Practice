@@ -1,0 +1,18 @@
+management:
+  endpoints:
+    web:
+      base-path: "/"
+      path-mapping:
+        health: "status"
+      exposure:
+        include: health
+  endpoint:
+    health:
+      enabled: true
+
+aws:
+  region:
+  user-pool:
+    client-id:
+    client-secret:
+

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Simple Microservice with In-memory Cache
+server:
+  port: 80

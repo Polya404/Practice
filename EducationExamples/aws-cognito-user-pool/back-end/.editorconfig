@@ -1,0 +1,30 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+root = true
+
+
+[*]
+indent_style = space
+indent_size = 4
+
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.{kt,kts}]
+# ktlint_standard = disabled # Disable all rules from the `standard` rule set provided by KtLint
+ij_kotlin_allow_trailing_comma_on_call_site = true
+ij_kotlin_allow_trailing_comma = true
+ij_kotlin_continuation_indent_in_parameter_lists = false
+ij_kotlin_continuation_indent_in_supertype_lists = false
+ij_kotlin_continuation_indent_in_argument_lists = false
+ij_kotlin_continuation_indent_for_chained_calls = false

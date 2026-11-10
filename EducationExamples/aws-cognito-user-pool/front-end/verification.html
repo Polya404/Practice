@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Code Form</title>
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+<div id="app">
+    <h2>Verification Code Form</h2>
+    <form @submit.prevent="submitVerification">
+        <label for="email">Email:</label><br>
+        <input type="email" v-model="email" id="email" name="email" required><br><br>
+        <label for="verificationCode">Verification Code:</label><br>
+        <input type="text" v-model="verificationCode" id="verificationCode" name="verificationCode" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div v-if="successMessage" style="color: green;">{{ successMessage }}</div>
+    <div v-if="errorMessage" style="color: red;">{{ errorMessage }}</div>
+</div>
+
+<script>
+    new Vue({
+      el: '#app',
+      data: {
+        email: '',
+        verificationCode: '',
+        successMessage: '',
+        errorMessage: ''
+      },
+      methods: {
+        submitVerification() {
+          // Create a JSON object for the request
+          const confirmSignUpRequest = {
+            email: this.email,
+            code: this.verificationCode
+          };
+
+          // Make a POST request to the API endpoint for sign-up confirmation
+          fetch('http://localhost:8080/sign-up/confirm', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(confirmSignUpRequest)
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Sign-up confirmation successful:', data);
+            // Reset the form after successful confirmation
+            this.email = '';
+            this.verificationCode = '';
+            // Display success message
+            this.successMessage = 'Successfully registered';
+            this.errorMessage = ''; // Clear error message
+          })
+          .catch(error => {
+            console.error('Error during sign-up confirmation:', error);
+            // Display error message
+            this.errorMessage = 'Registration failed';
+            this.successMessage = ''; // Clear success message
+          });
+        }
+      }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+apply plugin: 'spring-cloud-contract'
+apply plugin: 'maven-publish'
+
+
+publishing {
+    repositories {
+        maven {
+            url "${project.rootDir}/build/repo"
+        }
+    }
+}
+
+contracts {
+    contractsDslDir = file("${projectDir}/src/main/resources/contracts")
+}
+
+generateContractTests.enabled = false
+
+build.finalizedBy(publish)
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.6'
+}

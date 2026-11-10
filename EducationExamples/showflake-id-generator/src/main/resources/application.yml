@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: "Snowflake ID Generator"
+
+snowflake-settings:
+  starting-epoch: 946684800
+  datacenter-id: 1
+  worked-id: 1
+
+management:
+  endpoints:
+    web:
+      base-path: /management
+      path-mapping:
+        health: health
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true

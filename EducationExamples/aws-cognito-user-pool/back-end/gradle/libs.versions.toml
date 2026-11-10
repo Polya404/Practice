@@ -1,0 +1,16 @@
+[versions]
+# plugins
+kotlin = "1.9.21"
+gradle-ktlint = "12.0.3"
+gradle-detekt = "1.23.4"
+spring-boot = "3.2.2"
+spring-dependency-management = "1.1.4"
+aws-sdk = "2.23.17"
+
+[libraries]
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "gradle-detekt" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "spring-boot" }
+
+aws-sdk-bom = { module = "software.amazon.awssdk:bom", version.ref = "aws-sdk" }
+aws-sdk-cognitoidentityprovider = { module = "software.amazon.awssdk:cognitoidentityprovider" }

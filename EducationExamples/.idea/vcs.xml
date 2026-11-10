@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/aws-cognito-user-pool" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/concurrency-performance-issue-from-interview" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ftgo-application" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ftgo-consumer-web-ui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ftgo-monolith" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github-api-library-kotlin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/github-init-project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kubernetes-simple-hello-world" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/roman-to-int-converter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/showflake-id-generator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-cache-with-eviction-policy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/simple-microservice-with-inmemory-cache" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/transaction-processing-with-kafka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/url-shortener" vcs="Git" />
+  </component>
+</project>

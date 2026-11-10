@@ -1,0 +1,37 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    working_directory: ~/ftgo-consumer-web-ui
+    steps:
+      - checkout
+      - run:
+          name: Install Node v12.22.1
+          command: |
+            . ./.circleci/load-nvm.sh
+            nvm install v12.22.1
+            nvm alias default v12.22.1
+      - run:
+          name: Install dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y libgbm-dev
+      - run:
+          command: |
+            . ./.circleci/load-nvm.sh
+            export CI_ARTIFACTS_PATH=~/ftgo-consumer-web-ui/ci-artifacts
+            export JEST_JUNIT_OUTPUT_DIR_PARENT=~/ftgo-consumer-web-ui/reports
+            ./build-and-test-all.sh
+      - run:
+          command: |
+            export FTGO_BACKEND_API_URL=http://localhost:8080
+            ./test-docker-image.sh
+      - run:
+          command: |
+            . ./.circleci/load-nvm.sh
+            export TEST_UI_URL=http://localhost:5000
+            npm run test-ui
+      - store_test_results:
+          path: ~/ftgo-consumer-web-ui/reports
+      - store_artifacts:
+          path: ~/ftgo-consumer-web-ui/ci-artifacts

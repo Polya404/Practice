@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "63f2790a-bdfa-4eff-bef5-7094c62857ad",
+		"name": "Spring_WebFlux_MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE Contact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@postman.com\",\n  \"name\": \"Test from Postman\",\n  \"phone\": \"110000000000\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/controller/contacts",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"controller",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "Create a Contact Object"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE Contact - functional",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@postman.com\",\n  \"name\": \"Test from Postman\",\n  \"phone\": \"110000000000\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/functional/contacts",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"functional",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "Create a Contact Object"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"5f14887390baf8178f4b9283\",\"name\":\"Test from Postman updated\",\"email\":\"test_updated@postman.com\",\"phone\":\"110000000000\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/controller/contacts/5f14887390baf8178f4b9283",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"controller",
+						"contacts",
+						"5f14887390baf8178f4b9283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Contact - functional",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"5f14887390baf8178f4b9283\",\"name\":\"Test from Postman updated\",\"email\":\"test_updated@postman.com\",\"phone\":\"110000000000\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/functional/contacts/5f14887390baf8178f4b9283",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"functional",
+						"contacts",
+						"5f14887390baf8178f4b9283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/controller/contacts/5f14887390baf8178f4b9283",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"controller",
+						"contacts",
+						"5f14887390baf8178f4b9283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Contact - functional",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/functional/contacts/5f14887390baf8178f4b9283",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"functional",
+						"contacts",
+						"5f14887390baf8178f4b9283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET by Id Contact",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/controller/contacts/5f14887390baf8178f4b9283",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"controller",
+						"contacts",
+						"5f14887390baf8178f4b9283"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET by Id Contact - functional",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/functional/contacts/5f10619b385b012854646c59",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"functional",
+						"contacts",
+						"5f10619b385b012854646c59"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all Contacts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/controller/contacts/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"controller",
+						"contacts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all Contacts - functional",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/functional/contacts",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"functional",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "31f1f75f-6c38-4778-94c7-06c893e4b8bf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "82a43092-b47a-458c-a240-8c26389ba8ac",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "407f1d83-0ca1-4362-9dfd-bc16fb76f99d",
+			"key": "baseURL",
+			"value": "http://localhost:8083"
+		}
+	]
+}

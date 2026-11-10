@@ -1,0 +1,20 @@
+[versions]
+# plugins
+kotlin = "2.0.21"
+gradle-ktlint = "12.2.0"
+gradle-detekt = "1.23.8"
+# dependencies
+kt-lib = "1.9.25"
+ktx-coroutines = "1.9.0"
+junit-jupiter = "5.11.4"
+assertj-core = "3.27.3"
+
+[libraries]
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "gradle-detekt" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kt-lib" }
+kotlinx-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "ktx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "ktx-coroutines" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj-core" }
+springframework-boot-starter-web = {module ="org.springframework.boot:spring-boot-starter-web"}
+springframework-boot-starter-actuator= {module ="org.springframework.boot:spring-boot-starter-actuator"}

@@ -1,0 +1,5 @@
+formatting:
+  Indentation:
+    # disabled since it clashes with `ktlint_standard=enabled` and `ktlint_code_style=ktlint_official` rules
+    active: false
+

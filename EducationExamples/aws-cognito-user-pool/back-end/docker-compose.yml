@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  user-pool-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # HTTP
+      - "5005:5005" # Debug
+    environment:
+      AWS_REGION: ${AWS_REGION}
+      AWS_USER_POOL_CLIENT_ID: ${AWS_USER_POOL_CLIENT_ID}
+      AWS_USER_POOL_CLIENT_SECRET: ${AWS_USER_POOL_CLIENT_SECRET}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Landon Industries Admin | Customers</title>
+</head>
+<body>
+<div th:replace="header :: header"></div>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title" th:text="${customer.name}">Customer Name</h3>
+            <h5 class="card-subtitle" th:text="${customer.contactName}">Contact Name</h5>
+            <p th:text="'Email Address: ' + ${customer.email}">Email address: foo </p>
+            <p th:text="'Phone Number: ' + ${customer.phoneNumber}">Phone Number</p>
+            <a class="btn btn-primary btn-sm" href="#" th:href="@{mailto:{to}(to=${customer.email})}">Send Email</a>
+        </div>
+    </div>
+    <div class="container" sec:authorize="hasRole('ADMIN')">
+        <table class="table">
+            <thead>
+            <th scope="col">Order Number</th>
+            <th scope="col">Order Info</th>
+            </thead>
+            <tbody>
+            <tr th:each="order : ${orders}">
+                <td th:text="${order.id}">Name</td>
+                <td th:text="${order.orderInfo}">Contact Email</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

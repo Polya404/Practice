@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+<div id="app">
+    <h2>Registration Form</h2>
+    <form @submit.prevent="submitForm">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" v-model="firstName" id="firstName" name="firstName" required><br><br>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" v-model="lastName" id="lastName" name="lastName" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" v-model="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" v-model="password" id="password" name="password" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div v-if="successMessage" style="color: green;">{{ successMessage }}</div>
+    <div v-if="errorMessage" style="color: red;">{{ errorMessage }}</div>
+</div>
+
+<script>
+    new Vue({
+      el: '#app',
+      data: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        successMessage: '',
+        errorMessage: ''
+      },
+      methods: {
+        submitForm() {
+          // Create a JSON object for the request
+          const signUpRequest = {
+            firstName: this.firstName,
+            familyName: this.lastName,
+            email: this.email,
+            password: this.password
+          };
+
+          // Make a POST request to the API endpoint
+          fetch('http://localhost:8080/sign-up', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(signUpRequest)
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Sign-up successful:', data);
+            // Reset the form after successful submission
+            this.firstName = '';
+            this.lastName = '';
+            this.email = '';
+            this.password = '';
+            // Display success message
+            this.successMessage = 'Successfully registered';
+            this.errorMessage = ''; // Clear error message
+          })
+          .catch(error => {
+            console.error('Error during sign-up:', error);
+            // Display error message
+            this.errorMessage = 'Registration failed';
+            this.successMessage = ''; // Clear success message
+          });
+        }
+      }
+    });
+</script>
+
+</body>
+</html>

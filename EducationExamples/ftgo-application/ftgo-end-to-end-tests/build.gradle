@@ -1,0 +1,68 @@
+apply plugin: FtgoOpenApiCodeGenPlugin
+
+/*
+plugins {
+  id 'org.hidetake.swagger.generator' version '2.18.1'
+}
+*/
+
+apply plugin: 'docker-compose'
+
+dependencies {
+  swaggerCodegen 'org.openapitools:openapi-generator-cli:3.3.4'     // or OpenAPI Generator
+}
+
+swaggerSources {
+  consumerService {
+    inputFile = file("${ftgoApiSpecsDir}/ftgo-consumer-service-swagger.json")
+    code {
+      language = 'java'
+      configFile = file('swagger-codegen-config/consumer-service.json')
+      components = ['models']
+      // Supports additionalProperties: https://github.com/swagger-api/swagger-codegen#to-generate-a-sample-client-library
+    }
+  }
+  restaurantService {
+    inputFile = file("${ftgoApiSpecsDir}/ftgo-restaurant-service-api-spec/web/ftgo-restaurant-service-swagger.json")
+    code {
+      language = 'java'
+      configFile = file('swagger-codegen-config/restaurant-service.json')
+      components = ['models']
+    }
+  }
+}
+
+dependencies {
+    ftgoApiSpecification project(":ftgo-consumer-service-api-spec")
+    ftgoApiSpecification project(":ftgo-restaurant-service-api-spec")
+
+    compile project(":ftgo-accounting-service-api")
+    compile project(":ftgo-consumer-service-api")
+    compile project(":ftgo-kitchen-service-api")
+    compile project(":ftgo-restaurant-service-api")
+    compile project(":ftgo-order-service-api")
+    compile project(":ftgo-delivery-service-api")
+
+    compile "io.eventuate.util:eventuate-util-test"
+
+    compile 'io.swagger:swagger-annotations:1.5.24'
+
+    testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+    testCompile "com.jayway.restassured:rest-assured:$restAssuredVersion"
+    testCompile "com.jayway.jsonpath:json-path:2.3.0"
+    testCompile project(":ftgo-test-util")
+
+
+}
+
+dockerCompose {
+    environment.put "EVENTUATE_COMMON_VERSION", eventuateCommonImageVersion
+    environment.put "EVENTUATE_CDC_VERSION", eventuateCdcImageVersion
+    environment.put "EVENTUATE_SAGA_VERSION", eventuateTramSagasImageVersion
+    environment.put "EVENTUATE_JAVA_BASE_IMAGE_VERSION", eventuateExamplesBaseImageVersion
+    environment.put "EVENTUATE_MESSAGING_KAFKA_IMAGE_VERSION", eventuateMessagingKafkaImageVersion
+
+    projectName = null
+}
+
+test.dependsOn(composeUp)

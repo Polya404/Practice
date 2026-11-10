@@ -1,0 +1,6 @@
+.circleci
+build
+ci-artifacts
+node_modules
+reports
+server

@@ -1,0 +1,59 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            url 'https://repo.spring.io/libs-milestone'
+        }
+    }
+    dependencies {
+        classpath "com.avast.gradle:gradle-docker-compose-plugin:$dockerComposePluginVersion"
+    }
+}
+
+apply plugin: 'docker-compose'
+apply plugin:'io.spring.dependency-management'
+
+apply plugin: IntegrationTestsPlugin
+
+dockerCompose {
+
+    startedServices = [ 'not-used']
+
+    integrationTests {
+        if (System.getenv("FTGO_DOCKER_COMPOSE_FILES") != null)
+            useComposeFiles = System.getenv("FTGO_DOCKER_COMPOSE_FILES").split(",").collect { "../" + it }
+
+        startedServices = [ 'mysql']
+        stopContainers = false
+    }
+}
+
+integrationTest.dependsOn(integrationTestsComposeUp)
+
+dependencies {
+
+
+    compile project(":common-swagger")
+    compile project(":ftgo-domain")
+
+    compile project(":ftgo-consumer-service-api")
+    compile project(":ftgo-restaurant-service-api")
+    compile project(":ftgo-order-service-api")
+    compile project(":ftgo-consumer-service")
+
+    compile "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-starter-actuator:$springBootVersion"
+    compile "io.micrometer:micrometer-registry-prometheus:$micrometerVersion"
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    compile 'javax.el:javax.el-api:2.2.5'
+
+    testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+
+    testCompile 'io.rest-assured:rest-assured:3.0.6'
+    testCompile 'io.rest-assured:spring-mock-mvc:3.0.6'
+    testCompile "io.rest-assured:json-path:3.0.6"
+
+    testCompile project(":ftgo-test-util")
+}

@@ -1,0 +1,10 @@
+UltrasonicSensor	KEYWORD1
+
+getTemperature	KEYWORD2
+setTemperature	KEYWORD2
+distanceInMicroseconds	KEYWORD2
+distanceInCentimeters	KEYWORD2
+distanceInMillimeters	KEYWORD2
+calibration	KEYWORD2
+
+toString	KEYWORD2

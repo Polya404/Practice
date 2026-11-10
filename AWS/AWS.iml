@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.aws-sam" />
+    </content>
+    <orderEntry type="jdk" jdkName="corretto-17" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="syncSettings">
+    <option name="samConfigs">
+      <map>
+        <entry key="template.yaml">
+          <value>
+            <SyncSamConfig>
+              <option name="bucketName" value="my-lambda-packages-1" />
+              <option name="enabledCapabilities">
+                <list>
+                  <option value="NAMED_IAM" />
+                  <option value="AUTO_EXPAND" />
+                </list>
+              </option>
+              <option name="stackName" value="HelloWorldStack" />
+              <option name="tags">
+                <map />
+              </option>
+              <option name="tempParameterOverrides">
+                <map />
+              </option>
+            </SyncSamConfig>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</module>
